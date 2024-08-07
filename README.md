@@ -21,5 +21,6 @@ Position of the player = direction vector ; every point of the line going from t
 
 Camera plane vector = line rpz with a single vector ; perpendicular on the directtion vector. Rpz the surface of the computer screen.
 
-![Image Alt text](http://url/to/img.png)
+![image](https://github.com/user-attachments/assets/52f8eb49-c171-4320-abf6-7dbf83123af6)
+
 
