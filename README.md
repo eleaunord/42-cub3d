@@ -20,7 +20,7 @@ Digital Differential Analysis (DDA) algorithm.
 Position of the player = direction vector ; every point of the line going from the pos of the player to where they are looking  is the sum of the position of the player, and a multiple of the direction vector. Points inside the screen.
 
 Camera plane vector = line rpz with a single vector ; perpendicular on the directtion vector. Rpz the surface of the computer screen.
-
+<div align="center">
 ![image](https://github.com/user-attachments/assets/52f8eb49-c171-4320-abf6-7dbf83123af6)
 
-
+</div>
