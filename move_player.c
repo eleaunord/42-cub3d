@@ -71,6 +71,6 @@ int	handle_keypress(int keycode, t_data *data)
 	if (keycode == 100)
 		rotate_left(data);
 	if (keycode == 65307)
-		exit(0);
+		free_all(data);
 	return (0);
 }

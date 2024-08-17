@@ -20,7 +20,7 @@ BONUS = 0
 
 # Compiler and compilation flags
 CC		= gcc
-CFLAGS	= -Werror -Wextra -Wall -g3 #-fsanitize=address
+CFLAGS	= -Werror -Wextra -Wall -g3
 
 # Minilibx
 MLX_PATH	= minilibx-linux/
@@ -38,6 +38,7 @@ SRC		= 	main.c \
 			init.c \
 			raycasting.c \
 			move_player.c \
+			textures.c \
 
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 

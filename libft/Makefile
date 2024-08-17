@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rrisseli <rrisseli@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/08 12:24:43 by rrisseli          #+#    #+#              #
-#    Updated: 2024/07/12 12:41:31 by rrisseli         ###   ########.fr        #
+#    Updated: 2024/08/17 18:40:39 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS		= ft_atoi.c \
 			  ft_substr.c \
 			  ft_strcmp.c \
 			  print_tab.c \
+			  ft_free_tab.c \
 			  
 SRCS_BONUS	= ft_lstnew_bonus.c \
 			  ft_lstadd_front_bonus.c \

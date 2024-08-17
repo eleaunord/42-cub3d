@@ -26,50 +26,6 @@ void	init_var_rays(t_data *data, int x)
 	data->rays->hit = 0;
 }
 
-void	draw_game(t_data *data, int x)
-{
-	int	color;
-	int	y;
-
-	int (draw_start) = -(data->rays->line_height) / 2 + WIN_HEIGHT / 2;
-	if (draw_start < 0)
-		draw_start = 0;
-	int (draw_end) = data->rays->line_height / 2 + WIN_HEIGHT / 2;
-	if (draw_end >= WIN_HEIGHT)
-		draw_end = WIN_HEIGHT - 1;
-	if (data->rays->side == 0)
-	{
-		if (data->rays->ray_dir_x > 0) // N
-			color = 0xFF0000; // rouge
-		else // S
-			color = 0x00FF00; // vert
-	}
-	else
-	{
-		if (data->rays->ray_dir_y > 0) // W
-			color = 0x0000FF; // Bleu
-		else // E
-			color = 0xFFFF00; // Jaune
-	}
-	y = 0;
-	while (y < draw_start)
-	{
-		data->img_data[y * (data->size_line / 4) + x] = data->ceiling_color;
-		y++;
-	}
-	y = draw_start;
-	while (y < draw_end)
-	{
-		data->img_data[y * WIN_WIDTH + x] = color;
-		y++;
-	}
-	while (y < WIN_HEIGHT)
-	{
-		data->img_data[y * (data->size_line / 4) + x] = data->floor_color;
-		y++;
-	}
-}
-
 void	check_hit(t_data *data)
 {
 	while (data->rays->hit == 0)

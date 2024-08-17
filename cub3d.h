@@ -25,10 +25,13 @@
 
 # define WIN_WIDTH 1920
 # define WIN_HEIGHT 1080
-# define TILE_SIZE 8
-# define FOV 60 * (M_PI / 180)
 # define MOVE_SPEED 0.05
 # define ROT_SPEED 0.05
+# define TEXTURE_SIZE 64
+# define NORTH 0
+# define SOUTH 1
+# define EAST 2
+# define WEST 3
 
 typedef struct s_raycasting
 {
@@ -59,6 +62,24 @@ typedef struct s_player
 	double			plane_y;
 }	t_player;
 
+typedef struct s_textures
+{
+	int		*image_texture_data;
+	int		width;
+	int		height;
+	int		bpp;
+	int		size_line;
+	int		endian;
+	int		y;
+	int		tex_x;
+	double	pos;
+	double	step;
+	double	wall_x;
+	int		draw_start;
+	int		draw_end;
+
+}	t_textures;
+
 typedef struct s_data
 {
 	void			*mlx_ptr;
@@ -71,17 +92,20 @@ typedef struct s_data
 	int				floor_color;
 	int				endian;
 	int				size_line;
+	int				*texture_buffer[4];
 	t_raycasting	*rays;
 	t_player		player;
+	t_textures		texture;
 }	t_data;
 
 //fonctions
 void	init_map(t_data *data);
 void	init_mlx(t_data *data);
-void	render_minimap(t_data *data);
 void	init_player(t_data *data);
 int		handle_keypress(int keycode, t_data *data);
-
+void	draw_game(t_data *data, int x);
 void	cast_rays(t_data *data, int x);
+void	init_textures(t_data *data);
+void	free_all(t_data *data);
 
 #endif
